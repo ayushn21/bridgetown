@@ -1,5 +1,5 @@
 module Fremont
-  class InitCommand < Clamp::Command
+  class InitCommand < BaseCommand
     def execute
       puts self.class.name
     end

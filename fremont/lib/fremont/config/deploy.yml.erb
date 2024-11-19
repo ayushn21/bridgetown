@@ -3,8 +3,8 @@ site: <%= site_name %>
 ssh:
   ip:
   user: deploy
-  key_name: key
-  key_path: path/to/key
+  keys: [ key ]
+  port: 22
 
 services:
   static_site:
