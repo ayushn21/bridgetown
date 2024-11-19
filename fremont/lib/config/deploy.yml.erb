@@ -1,0 +1,15 @@
+site: <%= site_name %>
+
+ssh:
+  ip:
+  user: deploy
+  key_name: key
+  key_path: path/to/key
+
+services:
+  static_site:
+    domain: example.com
+    mechanism: rsync
+  # web:
+  #   domain: api.example.com
+  #   mechanism: git

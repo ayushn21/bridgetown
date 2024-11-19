@@ -220,6 +220,7 @@ module Bridgetown
               run "bundle install", abort_on_failure: true
               # create binstubs to `bin/bridgetown` and `bin/bt`
               run "bundle binstubs bridgetown-core"
+              run "bundle binstubs fremont"
             end
           end
         end
