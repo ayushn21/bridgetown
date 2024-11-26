@@ -14,3 +14,5 @@ module Fremont
   end
 end
 
+# Net::SSH.start('116.203.220.190', 'admin')
+# Net::SSH.start('116.203.220.190', 'admin', keys: [ "" ], port: 22) do |session|

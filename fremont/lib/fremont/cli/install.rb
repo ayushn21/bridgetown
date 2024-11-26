@@ -1,3 +1,4 @@
+# add --sudo-user option
 module Fremont
   class InstallCommand < BaseCommand
     def execute
