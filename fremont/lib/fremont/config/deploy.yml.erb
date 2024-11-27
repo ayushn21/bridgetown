@@ -1,9 +1,10 @@
+# The name of the folder which will contain your site on the server
 site: <%= site_name %>
 
 ssh:
-  ip:
+  ip: # 0.0.0.0
   user: deploy
-  keys: [ key ]
+  keys: [ "path/to/key" ]
   port: 22
 
 services:

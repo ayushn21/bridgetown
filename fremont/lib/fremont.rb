@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "clamp"
+require "erb"
 
 module Fremont
   autoload :Config,             "fremont/config"
@@ -16,6 +17,16 @@ module Fremont
 
   class BaseCommand < Clamp::Command
     include Fremont::SSH
+
+    def execute
+      bridgetown_initializers = File.read(
+        File.join(Dir.pwd, "config", "initializers.rb")
+      )
+      @site_name = Dir.pwd.split(File::Separator).last
+    rescue Errno::ENOENT
+      puts "Bridgetown project not detected. Please run this command from the root of your Bridgetown project."
+      exit 1
+    end
   end
 
   class MainCommand < Clamp::Command
