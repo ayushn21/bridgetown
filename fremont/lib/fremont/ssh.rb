@@ -1,7 +1,12 @@
 module Fremont
   module SSH
-    def execute_on_server(script)
-      Net::SSH.start(*Config.current.ssh_params) do |session|
+    def execute_on_server(script, user: nil)
+      ssh_params = Config.current["ssh"]
+
+      ip = ssh_params["ip"]
+      user ||= ssh_params["user"]
+
+      Net::SSH.start(ip, user, **ssh_params.except("ip", "user")) do |session|
         session.open_channel do |channel|
           channel.on_data do |_, data|
             puts data

@@ -2,6 +2,9 @@
 
 require "clamp"
 require "erb"
+require "yaml"
+require "net/ssh"
+require "debug"
 
 module Fremont
   autoload :Config,             "fremont/config"
