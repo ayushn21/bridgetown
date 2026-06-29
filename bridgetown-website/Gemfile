@@ -9,11 +9,12 @@ gem "bridgetown-core", path: "../bridgetown-core"
 gem "bridgetown-foundation", path: "../bridgetown-foundation"
 gem "bridgetown-paginate", path: "../bridgetown-paginate"
 
-gem "puma", "< 7"
+gem "puma"
 
 gem "bridgetown-feed", "~> 4"
 gem "bridgetown-quick-search", "~> 3.0"
 gem "bridgetown-seo-tag", "~> 7.0"
+gem "bridgetown-sitemap", "~> 3.0"
 gem "bridgetown-svg-inliner", "~> 2.1"
 
 gem "gems", "~> 1.2"
